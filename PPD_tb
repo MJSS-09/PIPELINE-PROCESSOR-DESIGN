@@ -1,0 +1,34 @@
+module tb_pipeline_processor;
+    reg clk;
+    reg reset;
+    wire [3:0]  final_result_out;
+    wire        IF_valid, ID_valid, EX_valid, WB_valid;
+    wire [15:0] IF_instr, ID_instr, EX_instr, WB_instr;
+    wire [3:0]  ID_opA, ID_opB, EX_result, WB_wdata;
+    pipeline_processor uut (
+        .clk(clk),
+        .reset(reset),
+        .final_result_out(final_result_out),
+        .IF_valid(IF_valid),
+        .ID_valid(ID_valid),
+        .EX_valid(EX_valid),
+        .WB_valid(WB_valid),
+        .IF_instr(IF_instr),
+        .ID_instr(ID_instr),
+        .EX_instr(EX_instr),
+        .WB_instr(WB_instr),
+        .ID_opA(ID_opA),
+        .ID_opB(ID_opB),
+        .EX_result(EX_result),
+        .WB_wdata(WB_wdata)
+    );
+    always #5 clk = ~clk;
+    initial begin
+        clk = 0;
+        reset = 1;
+        #20 reset = 0;
+        #200;
+        $display("Final result in R4 (expected 9): %0d", final_result_out);
+        $finish;
+    end
+endmodule
