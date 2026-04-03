@@ -38,6 +38,10 @@ Artix-7 Fit: Only 26 LUTs and 65 FFs consumed — a negligible fraction of avail
 
 The 65 flip-flops are a direct hardware signature of the pipelining technique — they represent the pipeline registers holding partial results between stages. This design can be extended to support hazard detection, data forwarding, branch prediction, or a full RISC-V subset instruction set.
 
+FUTURE EXXTENSIONS
+
+Pipeline Processor: Add hazard detection and data forwarding units, branch prediction, expand to a full RISC-V RV32I subset.
+
 #OUTPUT
 
 <img width="1548" height="550" alt="Image" src="https://github.com/user-attachments/assets/3b36c2ac-27ca-40a7-b49c-1cd6f239b526" />
