@@ -40,6 +40,6 @@ The 65 flip-flops are a direct hardware signature of the pipelining technique â€
 
 #OUTPUT
 
-
+<img width="1548" height="550" alt="Image" src="https://github.com/user-attachments/assets/3b36c2ac-27ca-40a7-b49c-1cd6f239b526" />
 
 
